@@ -1,0 +1,22 @@
+// required to get $orange variable
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+
+$primary: #050C9C; // set the $primary variable
+$accent: #3ABEF9;
+
+// merge with existing $theme-colors map
+$theme-colors: map-merge($theme-colors, (
+        "primary": $primary,
+        "accent": $accent
+));
+
+$font-size-base:18px;
+
+// set changes
+@import "bootstrap";
+
+
+.accent-hover:hover{
+  background-color: $accent
+}
